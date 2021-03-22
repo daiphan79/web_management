@@ -26,12 +26,12 @@ th { background: rgb(84, 201, 236);}
         </tr>
         <tr>
             <td>1</td>
-            <td>Trần Đức Anh</td>
-            <td id="da">8.5</td>
-            <td>3.0</td>
-            <td>7.75</td>
-			            <td>3.0</td>
-            <td>7.75</td>
+            <td id="dongdien"></td>
+            <td id="da"></td>
+            <td id="congsuat"></td>
+            <td id="diennang"></td>
+            <td id="DigitalCLOCK"></td>
+            <td id="datetime"></td>
         </tr>
         <tr>
             <td>2</td>
@@ -91,14 +91,66 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
 
     var dienap = document.getElementById('da')
-     var read123 = firebase.database().ref().child("da")
+    var read123 = firebase.database().ref().child("da")
      read123.on('value',function(read123){
     dienap.innerHTML=read123.val();
     console.log(read123);
     });
 
+    var dongdien = document.getElementById('dongdien')
+    var dd = firebase.database().ref().child("dongdien")
+     dd.on('value',function(dd){
+    dongdien.innerHTML=dd.val();
+    console.log(dd);
+    });
+
+    var congsuat = document.getElementById('congsuat')
+    var cs = firebase.database().ref().child("congsuat")
+     cs.on('value',function(cs){
+    congsuat.innerHTML=cs.val();
+    console.log(cs);
+    });
+
+    var diennang1 = document.getElementById('dn')
+    var wh = firebase.database().ref().child("dn")
+     wh.on('value',function(wh){
+    diennang.innerHTML=wh.val();
+    console.log(wh);
+    });
     
-    dienap.innerHTML="xin chao"
+    function showTime(){
+    var date = new Date();
+    var h = date.getHours(); 
+    var m = date.getMinutes(); 
+    var s = date.getSeconds(); 
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
+    var time = h + ":" + m + ":" + s + " " + session;
+    document.getElementById("DigitalCLOCK").innerText = time;
+    document.getElementById("DigitalCLOCK").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    
+}
+ 
+showTime();
+
+var dt = new Date();
+document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+
 </script>
 <!-- <script src="key.js"></script> -->
 
