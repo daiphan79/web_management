@@ -1,90 +1,94 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>School timetable</title>
-    <style>
-    html {
-      font-family: sans-serif;
-    }
-
-    table {
-      border-collapse: collapse;
-      border: 2px solid rgb(104, 33, 33);
-      letter-spacing: 1px;
-      font-size: 0.8rem;
-    }
-
-    td, th {
-      border: 1px solid rgb(247, 22, 22);
-      padding: 10px 20px;
-    }
-
-    td {
-      text-align: center;
-    }
-
-    caption {
-      padding: 10px;
-    }
-    </style>
-  </head>
-  <body>
-    <h1>School timetable</h1>
-
-    <table>
-      <tr>
-        <td>&nbsp;</td>
-        <th>Mon</th>
-        <th>Tues</th>
-        <th>Wed</th>
-        <th>Thurs</th>
-        <th>Fri</th>
-        <th>Sat</th>
-        <th>Sun</th>
-      </tr>
-      <tr>
-        <th>1st period</th>
-        <td>English</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>German</td>
-        <td>Dutch</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <th>2nd period</th>
-        <td>English</td>
-        <td>English</td>
-        <td>&nbsp;</td>
-        <td>German</td>
-        <td>Dutch</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <th>3rd period</th>
-        <td>&nbsp;</td>
-        <td>German</td>
-        <td>&nbsp;</td>
-        <td>German</td>
-        <td>Dutch</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-      <tr>
-        <th>4th period</th>
-        <td>&nbsp;</td>
-        <td>English</td>
-        <td>&nbsp;</td>
-        <td>English</td>
-        <td>Dutch</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-    </table>
-
-
-  </body>
-</html>
+<style> 
+    header { width:100%;
+             height:150;
+             background:#669900;
+             }
+   #slogan { font-family: Arial; font-size:40; color: white;
+             text-shadow: 2px 2px 5px blue; font-weight: bold;
+             }
+   
+    nav {width: 100%;
+         line-height: 1;
+         background: #DDDDFF;
+         }	   
+    .menu { text-align: center;
+         }
+   .menu A { font-family: Arial; 
+             font-size:20;
+             text-decoration: none;
+             color: white ;}
+   .menu A:hover { font-weight: bold;
+                   color:red;
+                   font-size:20;}
+   article { width:100%;
+             height: 600;
+             }
+   .hmenu {list-style:none;
+           margin:0px;
+           padding:0px;
+           background: lightblue;
+           height:50px;
+           }
+   .hmenu>li { float:left;
+               margin:0px 5px;
+               position:relative;
+               }
+   .hmenu>li:hover>.submenu { display:block;}
+   .hmenu>li>A {text-decoration:none;
+                 font-size:22;
+                 color: white;
+                 font-weight: bold;
+                 font-variant:small-caps;
+                 display:block;
+                 padding-left:50px;
+                 line-height:50px;
+                 }
+   .hmenu>li>A:hover {font-weight:bold;
+   color:yellow;
+                       }
+   footer { width: 100%;
+            height: 160;
+            background: #669900;
+            }
+   #foot { font-size:15;
+           color:black;
+           font-family: Arial;
+           font-weight: bold;
+           }
+   
+   </style>
+   
+   <header>
+   <table width = 100% >
+     <td width = 220 > <Img src = h2.png width = "250" > </td>
+      <td align = center > <P id = slogan > GIÁM SÁT ĐIỆN NĂNG TÒA NHÀ </P> </TD>
+      </table>
+   </header>
+   
+   
+   <nav>
+     <ul class = hmenu >
+     <li> <A href = home.html target = "mainF" > TRANG CHỦ    </A> </LI>
+       <li> <A href = noidung.html target = "mainF" > NỘI DUNG    </A> </LI>
+         <li> <A href = thongtin.html target = "mainF" > THÔNG TIN    </A> </LI>
+           <li> <A href = lienhe.html target = "mainF" > LIÊN HỆ      </A> 
+           </LI>
+       </ul>
+   </nav>
+   
+   
+    <Article> 
+       <IFrame width = 100% height = 600 name = mainF src = noidung.html >
+       </IFrame>
+       </article>
+   
+   <Footer style="bottom: 0;"> 
+    <table width = 100% id = foot >
+    <td width =50% align = center >
+       <P>  DIENNANGTOANHA
+        <p>  Distric 9, HCM City
+        <P> Copyright © 2021 DIENNANG. All rights reserved. Powered by PhanTrongDai
+    </td>
+     <P> <li>  <A href = LAB14.html style = "border:none" target = "mainF" > Export display data to file.xls </A> </li> </p>
+    </table> 
+    </Footer>
