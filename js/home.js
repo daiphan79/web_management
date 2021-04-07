@@ -13,7 +13,7 @@
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
     
-        var dienap = document.getElementById('diennang1')
+        var dienap = document.getElementById('da')
         var read123 = firebase.database().ref().child("da")
          read123.on('value',function(read123){
         dienap.innerHTML=read123.val();
@@ -34,12 +34,12 @@
         console.log(cs);
         });
     
-        // var diennang1 = document.getElementById('dn')
-        // var wh = firebase.database().ref().child("dn")
-        //  wh.on('value',function(wh){
-        // diennang.innerHTML=wh.val();
-        // console.log(wh);
-        // });
+        var diennang1 = document.getElementById('dn')
+        var wh = firebase.database().ref().child("dn")
+         wh.on('value',function(wh){
+        diennang.innerHTML=wh.val();
+        console.log(wh);
+        });
 
 function btn_all(){
     if (all.innerHTML==="ON_ALL"){
